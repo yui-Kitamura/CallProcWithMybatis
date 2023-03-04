@@ -2,11 +2,18 @@ package pro.eng.yui.samples.callProcWithMybatis;
 
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
+import org.dbunit.IDatabaseTester;
+import org.dbunit.JdbcDatabaseTester;
+import org.dbunit.dataset.IDataSet;
+import org.dbunit.dataset.excel.XlsDataSet;
+import org.dbunit.operation.DatabaseOperation;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import pro.eng.yui.samples.callProcWithMybatis.dto.P_Register_Payment;
 
+import java.io.File;
 import java.io.InputStream;
 import java.sql.Date;
 import java.util.Properties;
@@ -32,6 +39,28 @@ class MainTest {
             System.out.println("** setup with DbUnit ABEND *****<");
             fail(e);
         }
+    }
+
+    @BeforeEach
+    public void setupData(){
+        System.out.println("-- adding dataset START ----->");
+        IDataSet dataSet = null;
+        try {
+            IDatabaseTester databaseTester = new JdbcDatabaseTester(
+                    "com.mysql.cj.jdbc.Driver",
+                    session.getConnection().getMetaData().getURL(),
+                    System.getenv("mysqlUserName"),
+                    System.getenv("mysqlUserPass")
+            );
+            dataSet = new XlsDataSet(new File("./src/test/resources/testData/testData.xlsx"));
+            databaseTester.setDataSet(dataSet);
+            databaseTester.setSetUpOperation(DatabaseOperation.CLEAN_INSERT);
+            databaseTester.onSetup();
+        } catch (Exception e) {
+            e.printStackTrace();
+            fail(e);
+        }
+        System.out.println("-- adding dataset END -----<");
     }
 
     @Test
