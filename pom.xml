@@ -8,6 +8,23 @@
     <artifactId>CallProcWithMybatis</artifactId>
     <version>1.0</version>
 
+    <organization>
+        <name>Yui-Kitamura LLC.</name>
+        <url>https://yui-kitamura.LLC/</url>
+    </organization>
+    <developers>
+        <developer>
+            <name>KITAMURA Yui</name>
+            <url>https://gray27.cat/</url>
+            <email>yui27@ymail.ne.jp</email>
+            <timezone>Asia/Tokyo</timezone>
+            <organization>Yui-Kitamura LLC.</organization>
+            <roles>
+                <role>Administrator</role>
+            </roles>
+        </developer>
+    </developers>
+
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
