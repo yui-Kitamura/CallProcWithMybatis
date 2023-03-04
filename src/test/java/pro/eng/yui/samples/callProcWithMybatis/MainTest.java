@@ -15,7 +15,7 @@ import pro.eng.yui.samples.callProcWithMybatis.dto.P_Register_Payment;
 
 import java.io.File;
 import java.io.InputStream;
-import java.sql.Date;
+import java.util.Date;
 import java.util.Properties;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -67,7 +67,7 @@ class MainTest {
     public void test(){
         P_Register_Payment paramAndResult = new P_Register_Payment();
         paramAndResult.workerId = 1234;
-        paramAndResult.paymentDate = new Date(2023,2,27);
+        paramAndResult.paymentDate = new Date();
         paramAndResult.boost = 100;
         session.update(QueryId.run, paramAndResult);
 
