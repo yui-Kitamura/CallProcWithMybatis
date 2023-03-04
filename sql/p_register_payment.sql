@@ -5,13 +5,13 @@ CREATE PROCEDURE p_register_payment (
    ,IN paymentDate DATE
    ,IN boost INT
    ,OUT success BOOLEAN
-   ,OUT paymentId INT
+   ,OUT paymentId BIGINT
    ,OUT errMsg VARCHAR(25)
 )
 root: BEGIN
     DECLARE age INT;
-    DECLARE paymentAmount DECIMAL;
-    DECLARE payId INT;
+    DECLARE paymentAmount BIGINT;
+    DECLARE payId BIGINT;
 
     SET success = FALSE;
     SET age = null;
@@ -46,7 +46,7 @@ root: BEGIN
     INSERT INTO t_payment (
         person_id, payment_id, payed_date, amount, note
     ) VALUES (
-        worker_id, payId, paymentDate, paymentAmount, null
+        workerId, payId, paymentDate, paymentAmount, null
     );
 
     COMMIT;

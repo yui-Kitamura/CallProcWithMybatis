@@ -12,7 +12,7 @@
         #{workerId}, #{paymentDate}, #{boost},
         <!-- outputs -->
         #{success, mode=OUT, javaType=Boolean, jdbcType=NUMERIC},
-        #{paymentId, mode=OUT, javaType=Integer, jdbcType=NUMERIC},
+        #{paymentId, mode=OUT, javaType=Long, jdbcType=NUMERIC},
         #{errMsg, mode=OUT, javaType=pro.eng.yui.samples.callProcWithMybatis.dto.colType.ErrMsg, jdbcType=VARCHAR}
         );
     </update>

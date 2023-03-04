@@ -12,7 +12,7 @@ COMMENT = 'master table for work persons';
 
 CREATE TABLE `pro_eng_yui_samples`.`t_payment` (
     `person_id` int NOT NULL,
-    `payment_id` int NOT NULL,
+    `payment_id` decimal(20,0) NOT NULL,
     `payed_date` date DEFAULT NULL,
     `amount` decimal(10,0) DEFAULT NULL,
     `note` varchar(50) DEFAULT NULL,
