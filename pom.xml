@@ -36,6 +36,7 @@
         <depend.version.junit>5.9.2</depend.version.junit>
         <depend.version.dbunit>2.7.3</depend.version.dbunit>
         <depend.version.slf4j>2.0.6</depend.version.slf4j>
+        <depend.version.poi>5.2.3</depend.version.poi>
     </properties>
 
     <dependencies>
@@ -78,6 +79,22 @@
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-simple</artifactId>
             <version>${depend.version.slf4j}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <!-- use Excel or other Microsoft documents
+                 injection test data with DbUnit -->
+            <!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi</artifactId>
+            <version>${depend.version.poi}</version>
+            <scope>test</scope>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>${depend.version.poi}</version>
             <scope>test</scope>
         </dependency>
 
