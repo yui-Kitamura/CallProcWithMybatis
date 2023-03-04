@@ -6,7 +6,7 @@ CREATE PROCEDURE p_register_payment (
    ,IN boost INT
    ,OUT success BOOLEAN
    ,OUT paymentId INT
-   ,OUT errMsg VARCHAR(20)
+   ,OUT errMsg VARCHAR(25)
 )
 root: BEGIN
     DECLARE age INT;

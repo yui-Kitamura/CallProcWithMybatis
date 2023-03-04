@@ -32,6 +32,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <!-- dependencies versions -->
         <depend.version.mybatis>3.5.12</depend.version.mybatis>
+        <depend.version.jdbc>8.0.32</depend.version.jdbc>
         <depend.version.junit>5.9.2</depend.version.junit>
         <depend.version.dbunit>2.7.3</depend.version.dbunit>
         <depend.version.slf4j>2.0.6</depend.version.slf4j>
@@ -44,6 +45,13 @@
             <artifactId>mybatis</artifactId>
             <version>${depend.version.mybatis}</version>
         </dependency>
+        <dependency>
+            <!-- https://mvnrepository.com/artifact/com.mysql/mysql-connector-j -->
+            <groupId>com.mysql</groupId>
+            <artifactId>mysql-connector-j</artifactId>
+            <version>${depend.version.jdbc}</version>
+        </dependency>
+
         <dependency>
             <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
             <groupId>org.junit.jupiter</groupId>
