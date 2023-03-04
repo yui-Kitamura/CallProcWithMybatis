@@ -17,6 +17,7 @@ public class Main {
 }
 
 /* package-private */ interface QueryId{
-    String namespace = "";
-    String run = "run";
+    String namespace = "pro.eng.yui.samples.";
+    String ns_p = namespace + "p_register_payment.";
+    String run = ns_p + "run";
 }
