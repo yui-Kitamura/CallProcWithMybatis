@@ -16,7 +16,7 @@ root: BEGIN
     SET success = FALSE;
     SET age = null;
 
-    SELECT TIMESTAMPDIFF(YEAR, birth, payment_date ) INTO age
+    SELECT TIMESTAMPDIFF(YEAR, birth, paymentDate ) INTO age
     FROM m_worker
     WHERE person_id = workerId
         AND LgcDelFlg = FALSE;
