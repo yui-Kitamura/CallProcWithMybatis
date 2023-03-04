@@ -4,17 +4,17 @@
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
     <typeAliases>
-        <package name="pro.eng.yui.samples"/>
+        <package name="pro.eng.yui.samples.callProcWithMybatis.dto"/>
     </typeAliases>
     <typeHandlers>
-        <package name="callProcWithMybatis.handler"/>
+        <package name="pro.eng.yui.samples.callProcWithMybatis.handler"/>
     </typeHandlers>
     <environments default="local_env">
         <environment id="local_env">
             <transactionManager type="JDBC"/>
             <dataSource type="POOLED">
                 <property name="driver" value="com.mysql.jdbc.Driver"/>
-                <property name="url" value="jdbc:mysql://127.0.0.1/dummy"/>
+                <property name="url" value="jdbc:mysql://127.0.0.1/pro_eng_yui_samples"/>
                 <!-- set these two environment variable in your system -->
                 <property name="username" value="System.getenv(&quot;mysqlUserName&quot;)" />
                 <property name="password" value="System.getenv(&quot;mysqlUserPass&quot;)" />

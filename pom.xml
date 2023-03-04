@@ -34,6 +34,7 @@
         <depend.version.mybatis>3.5.12</depend.version.mybatis>
         <depend.version.junit>5.9.2</depend.version.junit>
         <depend.version.dbunit>2.7.3</depend.version.dbunit>
+        <depend.version.slf4j>2.0.6</depend.version.slf4j>
     </properties>
 
     <dependencies>
@@ -56,6 +57,19 @@
             <groupId>org.dbunit</groupId>
             <artifactId>dbunit</artifactId>
             <version>${depend.version.dbunit}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${depend.version.slf4j}</version>
+        </dependency>
+        <dependency>
+            <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-simple -->
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>${depend.version.slf4j}</version>
             <scope>test</scope>
         </dependency>
 
