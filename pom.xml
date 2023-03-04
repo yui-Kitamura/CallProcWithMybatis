@@ -26,9 +26,39 @@
     </developers>
 
     <properties>
+        <!-- Java version -->
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!-- dependencies versions -->
+        <depend.version.mybatis>3.5.12</depend.version.mybatis>
+        <depend.version.junit>5.9.2</depend.version.junit>
+        <depend.version.dbunit>2.7.3</depend.version.dbunit>
     </properties>
+
+    <dependencies>
+        <dependency>
+            <!-- https://mvnrepository.com/artifact/org.mybatis/mybatis -->
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis</artifactId>
+            <version>${depend.version.mybatis}</version>
+        </dependency>
+        <dependency>
+            <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>${depend.version.junit}</version>
+            <scope>test</scope>
+        </dependency>
+        <!--suppress VulnerableLibrariesLocal -->
+        <dependency>
+            <!-- https://mvnrepository.com/artifact/org.dbunit/dbunit -->
+            <groupId>org.dbunit</groupId>
+            <artifactId>dbunit</artifactId>
+            <version>${depend.version.dbunit}</version>
+            <scope>test</scope>
+        </dependency>
+
+    </dependencies>
 
 </project>
