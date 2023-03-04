@@ -23,7 +23,7 @@ COMMENT='transactional data table for payment';
 
 CREATE TABLE `pro_eng_yui_samples`.`m_salary` (
     `pay_rank_id` INT NOT NULL,
-    `amount` DECIMAL NULL,
+    `amount` DECIMAL NOT NULL,
     PRIMARY KEY (`pay_rank_id`)
 )
 COMMENT = 'based payment amount ';
